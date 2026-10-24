@@ -1,0 +1,45 @@
+{
+  "name": "genpark-cart-abandonment-urgency-discount-optimizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Dynamic cart abandonment recovery optimizer calculating margin-safe urgency discount tiers to maximize recovered e-commerce checkout GMV.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "conversion-rate-optimization",
+  "tags": [
+    "cart-abandonment",
+    "discount-optimization",
+    "recovery-voucher",
+    "ecommerce-retention",
+    "margin-control"
+  ],
+  "inputs": {
+    "cart_value_usd": {
+      "type": "number",
+      "default": 850.0
+    },
+    "gross_margin_pct": {
+      "type": "number",
+      "default": 0.42
+    },
+    "hours_since_abandonment": {
+      "type": "integer",
+      "default": 18
+    }
+  },
+  "outputs": {
+    "recovery_id": {
+      "type": "string"
+    },
+    "recommended_discount_percentage": {
+      "type": "string"
+    },
+    "checkout_recovery_price_usd": {
+      "type": "number"
+    },
+    "ephemeral_voucher_code": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
